@@ -9,7 +9,7 @@ public class SomePage1 {
 
     private final WebDriver driver;
     private final By popupCloseButton = By.xpath("//*[@id=\"at-cv-lightbox-close\"]");
-    private final By var1 = By.xpath("");
+    private final By var1 = By.xpath("//*[@id=\"site-name\"]/a");
     private final By var2 = By.xpath("");
     private final By var3 = By.xpath("");
     private final By var4 = By.xpath("");
@@ -27,8 +27,8 @@ public class SomePage1 {
         wait.until(ExpectedConditions.visibilityOfElementLocated(popupCloseButton));
         driver.findElement(popupCloseButton).click();
     }
-    public void method1() {
-
+    public String method1() {
+        return driver.findElement(var1).getText();
     }
     public void method2() {
 
